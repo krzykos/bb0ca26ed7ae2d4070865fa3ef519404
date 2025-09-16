@@ -1,0 +1,27 @@
+{
+  "name": "media-publisher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzykos/bb0ca26ed7ae2d4070865fa3ef519404.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krzykos/bb0ca26ed7ae2d4070865fa3ef519404/issues"
+  },
+  "homepage": "https://github.com/krzykos/bb0ca26ed7ae2d4070865fa3ef519404#readme",
+  "devDependencies": {
+    "@types/node": "^24.5.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
