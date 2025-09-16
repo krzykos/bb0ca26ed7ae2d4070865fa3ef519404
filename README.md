@@ -8,7 +8,7 @@ npm install
 
 ## Setup
 
-Provide the following environment variables
+Provide the following environment variables:
 
 - HF_API_KEY - API access token for https://huggingface.co
 
@@ -20,7 +20,15 @@ Provide the following environment variables
 curl -X POST http://localhost:3000/stories -H "Content-Type: application/json" -d '{"title":"Alice","contents":"from wonderland"}'
 ```
 
-## Classification engine test
+### Get all stories
+
+```
+curl http://localhost:3000/stories
+```
+
+## Tools
+
+### Classification engine test
 
 ```
 npm exec tsx src/verify.ts

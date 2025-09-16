@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 
 import * as database from "./database";
+import { verifyJob } from "./verify-job";
 
 const app = express();
 app.use(express.json());
@@ -37,3 +38,5 @@ app.get("/stories", (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
+
+setInterval(verifyJob, 5000);

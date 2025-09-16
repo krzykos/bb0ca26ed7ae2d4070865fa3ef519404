@@ -1,4 +1,4 @@
-type StoryStatus = "new";
+type StoryStatus = "new" | "approved" | "rejected";
 type Story = {
   id: number;
   title: string;
@@ -19,8 +19,8 @@ export function add(title: string, contents: string): Story {
     contents,
     status: "new",
   };
-  STORIES.push(cloneStory(story));
-  return story;
+  STORIES.push(story);
+  return cloneStory(story);
 }
 
 export function queryAll(): Story[] {
@@ -29,4 +29,13 @@ export function queryAll(): Story[] {
 
 export function queryByStatus(status: StoryStatus): Story[] {
   return STORIES.filter((story) => story.status === status).map(cloneStory);
+}
+
+export function updateStatus(id: number, newStatus: StoryStatus): Story {
+  const story = STORIES.find((story) => story.id === id);
+  if (!story) {
+    throw new Error(`story ${id} not found`);
+  }
+  story.status = newStatus;
+  return cloneStory(story);
 }

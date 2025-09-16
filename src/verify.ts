@@ -3,7 +3,7 @@ import process from "node:process";
 
 type Response = { label: "POSITIVE" | "NEGATIVE"; score: number }[][];
 
-async function verify(contents) {
+export async function verify(contents) {
   const response = await fetch(
     "https://router.huggingface.co/hf-inference/models/distilbert/distilbert-base-uncased-finetuned-sst-2-english",
     {
